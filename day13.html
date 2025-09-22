@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        try{
+            // code may throw an error
+
+        }
+        catch(error){
+            //code to handel the error
+
+        }
+        finally{
+            //code always execte
+
+        }
+        try{
+            let atmpin=2345;
+            if(atmpin!==12345){
+                throw "throw in correct pin"
+            }
+            console.log("logged in")
+        }
+        catch(error){
+            console.log("error"+error)
+        }
+        finally{
+            console.log("executed succesfully")
+        }
+        //JSON method : parsec(),stringify()
+        //parse()-
+        //stringify()-converts object to string.
+        let str='("name":"js")';
+        console.log(str)
+        let strstred = JSON.parse(str);
+        console.log(strstred)
+        let obj={id:"1"};
+        let streobj=JSON.stringify(obj);
+        console.log(streobj);
+        //fetch function
+        //passing the URL of the JSON
+        // this return a promise that resolve to a response object
+        let sample = new Promise((resolve, reject) => {
+            if(workisdone){
+                console.log(("completed"))
+            }
+            else{
+                console.log(reject("notyet"))
+            }
+        })
+        fetch("data.json")
+        .then(res=>res.json())
+        .then(data=>{
+            for(let detail of preson){
+                
+            }
+        })
+    </script>
+</body>
+</html>
